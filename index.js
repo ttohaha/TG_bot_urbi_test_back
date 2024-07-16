@@ -109,6 +109,9 @@ bot.catch((err)=>{
 
 bot.start()
 
+app.get('/', (req,res)=>{
+    res.send(`/запущен бот \n Ураааааа`)
+})
 
 app.post('/web-data', (req,res)=>{
     const {queryId, products, totalPrice} = req.body
