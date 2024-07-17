@@ -109,7 +109,7 @@ bot.catch((err)=>{
 bot.start()
 
 app.get('/', (req,res)=>{
-    res.send(`/запущен бот \n Ураааааа`)
+    res.send(`/запущен бот \n Ураааааа  \n Ураааааа ${bot}`)
 })
 
 app.post('/web-data', (req,res)=>{
