@@ -13,7 +13,6 @@ const {hydrate} = require('@grammyjs/hydrate')
 // import {Bot, GrammyError, HttpError, Keyboard, InlineKeyboard} from 'grammy'
 // import {hydrate} from '@grammyjs/hydrate'
 const bot = new Bot(process.env.BOT_API_KEY)
-
 const app = express();
 app.use(express.json())
 app.use(cors())
@@ -46,7 +45,7 @@ bot.use(hydrate())
 //       }
 //   });
 /*ghadshhashkadskhhjdsa*/ 
-
+console.log(bot);
 bot.hears(/блин/, async ctx=>{
     await ctx.reply('ругаешься (')
 })
@@ -110,7 +109,7 @@ bot.catch((err)=>{
 bot.start()
 
 app.get('/', (req,res)=>{
-    res.send(`/запущен бот \n Ураааааа \n ${process?.env?.BOT_API_KEY}`)
+    res.send(`/запущен бот \n Ураааааа`)
 })
 
 app.post('/web-data', (req,res)=>{
