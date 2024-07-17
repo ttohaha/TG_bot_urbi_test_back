@@ -18,7 +18,7 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
-const botapp = new TelegramBot(token, {polling: true});
+// const botapp = new TelegramBot(token, {polling: true});
 bot.use(hydrate())
 
 // bot.on(':media').on('::url',()=>{}) метод И
@@ -110,7 +110,7 @@ bot.catch((err)=>{
 bot.start()
 
 app.get('/', (req,res)=>{
-    res.send(`/запущен бот \n Ураааааа`)
+    res.send(`/запущен бот \n Ураааааа \n ${process?.env?.BOT_API_KEY}`)
 })
 
 app.post('/web-data', (req,res)=>{
